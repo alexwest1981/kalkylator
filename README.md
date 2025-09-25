@@ -1,4 +1,5 @@
-#Kalkylator
+Kalkylator
+
 Ett Java-konsolprogram som fungerar som en kalkylator. Programmet är utvecklat för att uppfylla alla kravspecifikationer i kursen "Grundläggande programmering i Java".
 
 Beskrivning
