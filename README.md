@@ -47,3 +47,27 @@ Push 2: Implementerade grundläggande beräkningar för två tal.
 Push 3: Utökade beräkningarna till att hantera fler än två tal och la till felhantering.
 
 Push 4: Komplett kalkylator med stöd för alla VG-krav, inklusive modulus och robust felhantering.
+
+
+V2: Grafiskt Användargränssnitt (GUI)
+Efter att ha slutfört konsolversionen (V1) har projektet byggts vidare till en andra version med ett grafiskt gränssnitt (GUI) med fokus på separation av ansvar och moderna Java-principer. Denna utveckling ligger i en separat branch (feature/gui-version).
+
+Tekniska Uppgraderingar i V2
+Aspekt	V1 (Konsol)	V2 (GUI)
+Gränssnitt	Konsolbaserat (System.out.println, Scanner)	Swing (JFrame, GridLayout)
+Kodarkitektur	Logik och I/O blandat i perform... metoder.	Strikt separation i två klasser.
+Logik-klass	Existerade ej.	CalculatorLogic.java: Innehåller endast matematiska funktioner.
+GUI-klass	Existerade ej.	CalculatorGUI.java: Hanterar endast knappar och display.
+Felhantering	Fångar NumberFormatException.	Fångar och hanterar ArithmeticException (t.ex. vid division med noll) från logikklassen och presenterar felet i displayen.
+Inputhantering	Komplexa while-loopar för att läsa in text/tal.	Standardiserad händelsehantering via ActionListener (klick på knappar).
+
+Exportera till Kalkylark
+Kör V2 (GUI-versionen)
+För att köra denna version måste du:
+
+Byta till branchen feature/gui-version.
+
+Bash
+
+git checkout feature/gui-version
+Kör main-metoden i filen CalculatorGUI.java.
