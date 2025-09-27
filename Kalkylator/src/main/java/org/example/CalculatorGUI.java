@@ -43,7 +43,7 @@ public class CalculatorGUI extends JFrame implements ActionListener {
                 "4", "5", "6", "*",
                 "1", "2", "3", "-",
                 "0", ".", "%", "+",
-                "C", "=" // Tog bort det extra tomrummet i listan
+                "C", "="
         };
 
         for (String buttonLabel : buttonLabels) {
@@ -60,7 +60,6 @@ public class CalculatorGUI extends JFrame implements ActionListener {
         setVisible(true);
     }
 
-    // KORRIGERING: main-metoden måste ligga utanför konstruktorn och vara public static
     public static void main(String[] args) {
         // SwingUtilities.invokeLater säkerställer att GUI:et körs på rätt tråd
         SwingUtilities.invokeLater(CalculatorGUI::new);
@@ -73,7 +72,6 @@ public class CalculatorGUI extends JFrame implements ActionListener {
         // Hantera siffror och decimaltecken
         if (command.matches("[0-9]") || command.equals(".")) {
             if (isNewCalculation) {
-                // Fixade: "0" blir nu "0." vid första decimaltecknet för att matcha standardkalkylatorer
                 displayField.setText(command.equals(".") ? "0." : command);
                 isNewCalculation = false;
             } else {
