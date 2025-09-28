@@ -1,4 +1,4 @@
-Kalkylator
+<h1>Kalkylator</h1>
 
 Ett Java-konsolprogram som fungerar som en kalkylator. Programmet är utvecklat för att uppfylla alla kravspecifikationer i kursen "Grundläggande programmering i Java".
 
@@ -49,7 +49,7 @@ Push 3: Utökade beräkningarna till att hantera fler än två tal och la till f
 Push 4: Komplett kalkylator med stöd för alla VG-krav, inklusive modulus och robust felhantering.
 
 
-V2: Grafiskt Användargränssnitt (GUI)
+<h1>V2: Grafiskt Användargränssnitt (GUI)</h1>
 Efter att ha slutfört konsolversionen (V1) har projektet byggts vidare till en andra version med ett grafiskt gränssnitt (GUI) med fokus på separation av ansvar och moderna Java-principer. Denna utveckling ligger i en separat branch (feature/gui-version).
 
 Tekniska Uppgraderingar i V2
@@ -61,7 +61,6 @@ GUI-klass	Existerade ej.	CalculatorGUI.java: Hanterar endast knappar och display
 Felhantering	Fångar NumberFormatException.	Fångar och hanterar ArithmeticException (t.ex. vid division med noll) från logikklassen och presenterar felet i displayen.
 Inputhantering	Komplexa while-loopar för att läsa in text/tal.	Standardiserad händelsehantering via ActionListener (klick på knappar).
 
-Exportera till Kalkylark
 Kör V2 (GUI-versionen)
 För att köra denna version måste du:
 
