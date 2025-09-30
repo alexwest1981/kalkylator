@@ -10,8 +10,6 @@ public class CalculatorGUI extends JFrame implements ActionListener {
 
     // Deklarera komponenter
     private final JTextField displayField;
-    // Borta, då vi inte behöver dem som separata fält längre
-    // private JButton addButton, subButton, mulButton, divButton, modButton, equalsButton, clearButton;
 
     // Kommer att lagra det första talet och den valda operationen
     private double num1 = 0;
