@@ -55,9 +55,13 @@ Efter att ha slutfört konsolversionen (V1) har projektet byggts vidare till en 
 Tekniska Uppgraderingar i V2
 Aspekt	V1 (Konsol)	V2 (GUI)
 Gränssnitt	Konsolbaserat (System.out.println, Scanner)	Swing (JFrame, GridLayout)
-Kodarkitektur	Logik och I/O blandat i perform... metoder.	Strikt separation i två klasser.
-Logik-klass	Existerade ej.	CalculatorLogic.java: Innehåller endast matematiska funktioner.
-GUI-klass	Existerade ej.	CalculatorGUI.java: Hanterar endast knappar och display.
+Kodarkitektur	Logik och I/O blandat i perform-metoder.	Strikt separation i två klasser.
+
+Logik-klass	Existerade ej.	
+CalculatorLogic.java: Innehåller endast matematiska funktioner.
+
+GUI-klass	Existerade ej.	
+CalculatorGUI.java: Hanterar endast knappar och display.
 Felhantering	Fångar NumberFormatException.	Fångar och hanterar ArithmeticException (t.ex. vid division med noll) från logikklassen och presenterar felet i displayen.
 Inputhantering	Komplexa while-loopar för att läsa in text/tal.	Standardiserad händelsehantering via ActionListener (klick på knappar).
 
@@ -70,3 +74,6 @@ Bash
 
 git checkout feature/gui-version
 Kör main-metoden i filen CalculatorGUI.java.
+
+
+Koden är menad som i rent utbildningssyfte, och får användas fritt för att skapa egen branch för enkel vidareutveckling.
